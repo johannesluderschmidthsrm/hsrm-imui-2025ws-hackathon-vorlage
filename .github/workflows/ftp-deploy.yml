@@ -1,0 +1,19 @@
+name: 🚀 Deploy KIM-PIM website on push
+
+on: push
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: w01c627a.kasserver.com
+        server-dir: X/
+        username: f017649b
+        password: ${{ secrets.FTP_PWD }}
