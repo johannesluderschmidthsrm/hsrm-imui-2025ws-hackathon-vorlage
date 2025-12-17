@@ -1,4 +1,4 @@
-name: 🚀 Deploy KIM-PIM website on push
+name: 🚀 Deploy IMUI website on push
 
 on: push
 
@@ -15,5 +15,5 @@ jobs:
       with:
         server: w01c627a.kasserver.com
         server-dir: X/
-        username: f017649b
+        username: f017c53b
         password: ${{ secrets.FTP_PWD }}
